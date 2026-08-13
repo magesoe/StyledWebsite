@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abyssal is a cinematic, accessible expedition teaser built entirely with semantic HTML, CSS atmosphere, and a few kilobytes of vanilla JavaScript." />
+  <meta name="theme-color" content="#08111f" />
+  <meta property="og:title" content="Abyssal — The Light Below" />
+  <meta property="og:description" content="Follow Expedition One through the five ocean zones to the deepest known point on Earth." />
+  <title>Abyssal — The Light Below</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="/src/shared.css" />
+  <link rel="stylesheet" href="/abyssal/abyssal.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to expedition</a>
+  <div class="ocean-field" aria-hidden="true">
+    <i class="mote mote-one"></i><i class="mote mote-two"></i><i class="mote mote-three"></i><i class="mote mote-four"></i><i class="mote mote-five"></i>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="nav" aria-label="Primary navigation">
+    <a class="logo" href="/abyssal/" aria-label="Abyssal home">
+      <svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="17.5"/><path d="M11 25c4-12 12-12 16 0M15 19h8"/></svg>
+      <span>ABYSSAL<small>Expedition 01</small></span>
+    </a>
+    <nav>
+      <a href="#mission">Mission</a>
+      <a href="#hadal">Updates</a>
+      <button class="trailer-link" type="button" data-open-trailer>Watch trailer <span>↗</span></button>
+    </nav>
+  </header>
+
+  <aside class="depth-gauge" aria-hidden="true">
+    <span class="gauge-title">Depth</span>
+    <span class="gauge-track"><i></i></span>
+    <strong data-depth>00000 M</strong>
+    <span class="zone-name" data-zone>Sunlight</span>
+  </aside>
+
+  <main id="main">
+    <section class="hero zone" id="sunlight" data-depth-value="0" data-zone-name="Sunlight">
+      <div class="hero-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Challenger Deep · 11°22′N 142°36′E</p>
+        <h1><span>The light</span><span class="glow-text">below.</span></h1>
+        <div class="hero-bottom">
+          <p>In 2026, a five-person research team will descend 10,911 meters to document the living light of the hadal zone.</p>
+          <button class="primary-cta" type="button" data-open-trailer><span class="play" aria-hidden="true">▶</span><span>Watch field trailer<small>01:42 minutes</small></span></button>
+        </div>
+      </div>
+      <a class="descent-cue" href="#twilight"><span>Begin descent</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <section class="zone content-zone twilight" id="twilight" data-depth-value="1000" data-zone-name="Twilight">
+      <div class="zone-index reveal"><span>Zone 02</span><strong>200—1,000 M</strong></div>
+      <div class="section-copy reveal">
+        <p class="eyebrow">Mesopelagic layer</p>
+        <h2>Where daylight becomes memory.</h2>
+        <p>At two hundred meters, photosynthesis stops. Blue is the last wavelength to disappear. Below it, nearly every flash of light is made by something alive.</p>
+      </div>
+      <figure class="specimen-card reveal">
+        <div class="jelly" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <figcaption><span>Specimen A–17</span><strong>Atolla wyvillei</strong><small>Alarm display · 680 M</small></figcaption>
+      </figure>
+    </section>
+
+    <section class="zone content-zone midnight" id="midnight" data-depth-value="4000" data-zone-name="Midnight">
+      <div class="zone-index reveal"><span>Zone 03</span><strong>1,000—4,000 M</strong></div>
+      <div class="midnight-grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Bathypelagic layer</p>
+          <h2>No sun.<br>Only signals.</h2>
+        </div>
+        <blockquote class="reveal">“Down here, light is language: a warning, a lure, a question asked into the dark.”<cite>Dr. Mina Okafor · Lead biologist</cite></blockquote>
+      </div>
+      <div class="instrument-panel reveal" aria-label="Live environmental readings">
+        <div><span>Ambient light</span><strong>0.0001<small> LUX</small></strong></div>
+        <div><span>Temperature</span><strong>3.7<small> °C</small></strong></div>
+        <div><span>Pressure</span><strong>401<small> BAR</small></strong></div>
+        <div><span>O₂ saturation</span><strong>18.2<small> %</small></strong></div>
+      </div>
+    </section>
+
+    <section class="zone content-zone mission" id="mission" data-depth-value="6000" data-zone-name="Abyssal">
+      <div class="zone-index reveal"><span>Zone 04</span><strong>4,000—6,000 M</strong></div>
+      <div class="mission-head reveal">
+        <p class="eyebrow">The expedition</p>
+        <h2>One descent.<br>Six hours below.</h2>
+        <p>Our crew will pair low-light cinema sensors with non-invasive sampling, recording behavior without flooding the environment with artificial light.</p>
+      </div>
+      <ol class="mission-timeline">
+        <li class="reveal"><span>01</span><div><strong>Pressure test</strong><p>Full systems validation aboard R/V Calypso II.</p></div><small>04:10</small></li>
+        <li class="reveal"><span>02</span><div><strong>Blue-water launch</strong><p>Submersible Nereid separates at first light.</p></div><small>05:36</small></li>
+        <li class="reveal"><span>03</span><div><strong>Hadal arrival</strong><p>Passive observation begins at 10,850 meters.</p></div><small>08:52</small></li>
+      </ol>
+    </section>
+
+    <section class="zone hadal" id="hadal" data-depth-value="10911" data-zone-name="Hadal">
+      <div class="hadal-rings" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
+      <div class="hadal-copy reveal">
+        <p class="eyebrow">10,911 meters · Hadal zone</p>
+        <h2>Be there when<br><span>the dark answers.</span></h2>
+        <p>The expedition launches November 2026. Field notes, first footage, and the full documentary will be sent to subscribers first.</p>
+        <form class="signup" novalidate>
+          <label for="email">Email address</label>
+          <div><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><button type="submit">Notify me <span>↗</span></button></div>
+          <p class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/">← All demos</a>
+    <span>11°22′N · 142°36′E</span>
+    <span>Research fiction · Interface study</span>
+  </footer>
+
+  <dialog class="trailer-dialog" aria-labelledby="trailer-title">
+    <button class="dialog-close" type="button" data-close-trailer aria-label="Close trailer">×</button>
+    <div class="trailer-frame">
+      <div class="sonar" aria-hidden="true"><i></i></div>
+      <p>Field trailer · Expedition 01</p>
+      <h2 id="trailer-title">The ocean makes<br>its own stars.</h2>
+      <span>This interactive demo uses no video asset—the trailer moment is composed from live CSS.</span>
+    </div>
+  </dialog>
+
+  <script type="module" src="/abyssal/abyssal.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Two cinematic web demos proving that atmosphere, motion, and a single orchestrated reveal can coexist with semantic, indexable HTML." />
+  <meta name="theme-color" content="#070b12" />
+  <title>Cinematic Web — Two Progressive Enhancement Demos</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="/src/shared.css" />
+  <link rel="stylesheet" href="/src/home.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to demos</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Cinematic Web home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>Cinematic Web</span>
+    </a>
+    <span class="header-note">Two tiers · one thesis</span>
+  </header>
+
+  <main id="content">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="kicker">The engine was never the magic</p>
+      <h1 id="intro-title">Grade. Glow.<br><em>Restraint.</em></h1>
+      <p class="lede">Two complete experiments borrowing the atmosphere of a canvas-first studio site while keeping content semantic, accessible, and indexable.</p>
+      <a class="scroll-cue" href="#demos">Explore the builds <span aria-hidden="true">↓</span></a>
+      <div class="orb orb-a" aria-hidden="true"></div>
+      <div class="orb orb-b" aria-hidden="true"></div>
+    </section>
+
+    <section class="demos" id="demos" aria-label="Demo sites">
+      <article class="demo-card abyss-card reveal">
+        <a class="card-link" href="/abyssal/" aria-label="Open Abyssal, the CSS-only Tier 1 demo"></a>
+        <div class="card-topline"><span>Tier 01</span><span>HTML · CSS · JS</span></div>
+        <div class="abyss-visual" aria-hidden="true">
+          <span class="depth-line"></span>
+          <span class="specimen specimen-a"></span>
+          <span class="specimen specimen-b"></span>
+          <strong>10,911<small>M</small></strong>
+        </div>
+        <div class="card-copy">
+          <p>Expedition teaser</p>
+          <h2>Abyssal</h2>
+          <span>Pure DOM. Cinematic atmosphere. Zero WebGL.</span>
+        </div>
+        <span class="card-action" aria-hidden="true">Descend ↘</span>
+      </article>
+
+      <article class="demo-card meridian-card reveal">
+        <a class="card-link" href="/meridian/" aria-label="Open Meridian, the React Three Fiber Tier 2 demo"></a>
+        <div class="card-topline"><span>Tier 02</span><span>DOM + R3F island</span></div>
+        <div class="watch-visual" aria-hidden="true">
+          <span class="watch-strap"></span>
+          <span class="watch-case">
+            <i class="watch-hand hand-hour"></i>
+            <i class="watch-hand hand-minute"></i>
+            <i class="watch-pip pip-12"></i>
+            <i class="watch-pip pip-3"></i>
+            <i class="watch-pip pip-6"></i>
+            <i class="watch-pip pip-9"></i>
+          </span>
+        </div>
+        <div class="card-copy">
+          <p>Mechanical dive watch</p>
+          <h2>Meridian</h2>
+          <span>One progressive WebGL object. Everything else is HTML.</span>
+        </div>
+        <span class="card-action" aria-hidden="true">Inspect ↗</span>
+      </article>
+    </section>
+
+    <section class="thesis reveal" aria-labelledby="thesis-title">
+      <p class="kicker">Five ingredients</p>
+      <h2 id="thesis-title">Color grading, emissive light, atmosphere, perpetual motion, and one great reveal.</h2>
+      <p>Tier 1 fakes them with browser primitives. Tier 2 makes them physical in one contained canvas. Both preserve the page beneath.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Built as a progressive-enhancement study.</span>
+    <span>2026 · Semantic by default</span>
+  </footer>
+  <script type="module" src="/src/home.js"></script>
+</body>
+</html>
