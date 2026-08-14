@@ -20,3 +20,16 @@
 .cover-story{position:relative;display:flex;align-items:flex-end;min-height:92svh;padding:clamp(6rem,10vw,10rem) clamp(1.2rem,7vw,8rem);color:#fff;background-position:center;background-size:cover;overflow:hidden;isolation:isolate}.cover-story::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,16,34,.9),rgba(3,16,34,.3) 62%,rgba(3,16,34,.18)),linear-gradient(0deg,rgba(3,16,34,.78),transparent 62%)}.cover-restoration{background-image:url('/baltic/fish-room.jpg');background-position:center 46%}.cover-together{background-image:url('/baltic/local-sea.jpg');background-position:center 58%}.cover-life{background-image:url('/baltic/blue-depths-2.jpg');background-position:center 48%}.cover-story-copy{position:relative;z-index:2;max-width:62rem}.cover-story-copy>p{margin:0 0 1.2rem;color:#74f0f1;font:700 .58rem "Courier New",monospace;letter-spacing:.15em;text-transform:uppercase}.cover-story h2{margin:0;font-size:clamp(3.8rem,8vw,8rem);font-weight:600;line-height:.84;letter-spacing:-.07em;text-shadow:0 3px 26px rgba(0,0,0,.5)}.cover-story-copy>span{display:block;max-width:29rem;margin:2rem 0 0;color:rgba(255,255,255,.82);font-size:clamp(.95rem,1.4vw,1.16rem);line-height:1.65}.join{color:#fff;background:linear-gradient(rgba(3,16,34,.72),rgba(3,16,34,.86)),url('/baltic/community.jpg') center/cover}.join::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(0,159,227,.12),transparent 48%)}.join-glow{z-index:1;border-color:rgba(116,240,241,.2);box-shadow:0 0 0 7vw rgba(0,159,227,.04),0 0 0 14vw rgba(0,159,227,.025)}.join-copy{z-index:2}.join-copy>p:first-child{color:#74f0f1}.join h2 span{color:#74f0f1}.join-copy>p:not(:first-child){color:rgba(255,255,255,.78)}.join a{color:#fff;border-color:rgba(255,255,255,.5)}.join a strong{color:#74f0f1}
 @media(max-width:800px){.cover-story{min-height:78svh}.cover-story::before{background:linear-gradient(0deg,rgba(3,16,34,.88),rgba(3,16,34,.2) 80%)}.cover-story h2{font-size:clamp(3.5rem,15vw,6rem)}}
 @media(prefers-reduced-motion:reduce){.current-hero .current-canvas{display:none}}
+
+/* Production shell */
+html{scroll-behavior:smooth;scroll-padding-top:6rem}
+body{min-width:320px}
+.logo img{content:normal}
+footer{align-items:center;background:#f5f8f4}
+footer img{width:6.75rem;height:3rem;object-fit:contain;object-position:left center}
+footer a{color:var(--ink);text-decoration:none}
+footer a:hover{text-decoration:underline;text-underline-offset:.35em}
+.nav a,.hero-link,.join a{transition:opacity .25s ease,border-color .25s ease}
+.nav a:hover,.hero-link:hover,.join a:hover{opacity:.72}
+.nav a:focus-visible,.hero-link:focus-visible,.join a:focus-visible,footer a:focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+@media(max-width:800px){footer{align-items:flex-start}.nav-join{font-size:0}.nav-join::before{content:"Join";font:700 .54rem "Courier New",monospace;letter-spacing:.12em}.nav-join span{font-size:.7rem}}
