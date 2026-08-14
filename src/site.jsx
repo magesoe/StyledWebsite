@@ -1,5 +1,3 @@
-import '/src/shared.css'
-
 const hero = document.querySelector('.current-hero')
 const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
   if (entry.isIntersecting) entry.target.classList.add('in-view')

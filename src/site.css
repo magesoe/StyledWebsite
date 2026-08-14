@@ -1,3 +1,55 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --focus: #79f3e2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+a { color: inherit; }
+img, svg { display: block; max-width: 100%; }
+::selection { background: rgba(79, 227, 208, .3); color: #fff; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1000;
+  padding: .75rem 1rem;
+  color: #071017;
+  background: var(--focus);
+  transform: translateY(-200%);
+  transition: transform .2s ease;
+}
+.skip-link:focus { transform: translateY(0); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
 :root{--paper:#edf3ee;--ink:#071d3c;--blue:#009fe3;--cyan:#42dce9;--deep:#061a34;--line:rgba(7,29,60,.17);color-scheme:light}
 *{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}.skip-link{color:#fff;background:var(--ink)}.nav{position:fixed;inset:0 0 auto;z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1rem clamp(1rem,3vw,3rem);mix-blend-mode:difference;color:#fff}.logo{width:7rem;filter:grayscale(1) brightness(3)}.logo img{width:100%;height:3rem;object-fit:contain;object-position:left center}.nav nav{display:flex;gap:2.2rem}.nav a{color:inherit;font:600 .54rem "Courier New",monospace;letter-spacing:.12em;text-decoration:none;text-transform:uppercase}.nav-join{justify-self:end}.nav-join span{margin-left:.7rem;color:var(--cyan)}
 .section-head>p,.bearings-sticky>p,.join-copy>p{color:var(--blue);font:600 .58rem "Courier New",monospace;letter-spacing:.15em;text-transform:uppercase}.section-head h2,.bearings-sticky h2{margin:0;font-size:clamp(3.5rem,7.3vw,7.5rem);font-weight:600;line-height:.88;letter-spacing:-.065em}.mission{padding:clamp(8rem,15vw,15rem) clamp(1.2rem,7vw,8rem);background:var(--paper)}.mission-copy{display:grid;grid-template-columns:1fr 1fr;gap:8vw;margin:7rem 0 9rem 17vw}.mission-copy p{margin:0;font-size:clamp(1rem,1.8vw,1.35rem);line-height:1.65}.mission-copy p:last-child{color:rgba(7,29,60,.57)}.mission-signals{display:grid;grid-template-columns:repeat(3,1fr);margin:0;border-block:1px solid var(--line)}.mission-signals div{padding:2rem;border-right:1px solid var(--line)}.mission-signals div:last-child{border:0}.mission-signals dt{color:rgba(7,29,60,.47);font:600 .52rem "Courier New",monospace;letter-spacing:.12em;text-transform:uppercase}.mission-signals dd{margin:1.7rem 0 .5rem;font-size:clamp(2.5rem,5vw,5rem);font-weight:600;letter-spacing:-.06em}.mission-signals span{color:rgba(7,29,60,.48);font-size:.75rem}
@@ -10,7 +62,7 @@
 
 /* Revised Tier 02 hero: one clear photographic moment, no scroll-jacked sequence. */
 .nav{color:#fff;background:linear-gradient(180deg,rgba(4,18,38,.9),rgba(4,18,38,.58) 72%,transparent);mix-blend-mode:normal;text-shadow:0 1px 12px rgba(0,0,0,.55)}
-.logo{filter:none}.logo img{content:url('/baltic/logo-white.svg')}.nav a{font-weight:700}.nav-join{padding:.7rem 1rem;border:1px solid rgba(255,255,255,.35);background:rgba(4,18,38,.28);backdrop-filter:blur(10px)}
+.logo{filter:none}.logo img{content:normal}.nav a{font-weight:700}.nav-join{padding:.7rem 1rem;border:1px solid rgba(255,255,255,.35);background:rgba(4,18,38,.28);backdrop-filter:blur(10px)}
 .current-hero{position:relative;min-height:100svh;color:#f6fbfa;background:var(--deep);overflow:hidden;isolation:isolate}.current-hero .current-poster{position:absolute;inset:0;z-index:0}.current-hero .current-poster img{width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:saturate(.86) contrast(1.06) brightness(.78)}.current-hero .stage-wash{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(3,16,34,.9) 0%,rgba(3,16,34,.72) 34%,rgba(3,16,34,.22) 67%,rgba(3,16,34,.35)),linear-gradient(0deg,rgba(3,16,34,.8),transparent 42%),radial-gradient(circle at 23% 47%,rgba(0,159,227,.17),transparent 26%)}.current-hero .hero-ui{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;min-height:100svh;padding:8rem clamp(1.2rem,6vw,6.5rem) 4rem}.current-hero .hero-index{position:absolute;margin:0;font:700 .5rem "Courier New",monospace;letter-spacing:.15em;text-transform:uppercase;left:clamp(1.2rem,6vw,6.5rem);top:8.2rem;color:rgba(255,255,255,.72);font-weight:700;text-shadow:0 2px 14px rgba(0,0,0,.8)}.current-hero .hero-title{position:relative;left:auto;top:auto;max-width:68rem;padding:clamp(1.4rem,2.4vw,2.5rem) clamp(1.2rem,2.7vw,2.8rem);background:linear-gradient(90deg,rgba(3,16,34,.76),rgba(3,16,34,.28) 78%,transparent);border-left:2px solid var(--cyan);backdrop-filter:blur(5px);transform:none;transition:none}.current-hero .hero-title>p{margin:0 0 1.1rem;font:700 .58rem "Courier New",monospace;letter-spacing:.16em;text-transform:uppercase;color:#74f0f1;text-shadow:0 2px 12px rgba(0,0,0,.8)}.current-hero .hero-title h1{margin:0;font-size:clamp(4rem,10vw,10rem);font-weight:600;line-height:.77;letter-spacing:-.075em;color:#fff;text-shadow:0 3px 28px rgba(0,0,0,.75)}.current-hero .hero-title h1 span{color:#fff;-webkit-text-stroke:0}.current-hero .hero-statement{position:relative;left:auto;right:auto;bottom:auto;width:min(31rem,100%);margin:2rem 0 0 clamp(1.2rem,2.7vw,2.8rem);color:rgba(255,255,255,.88);font-size:clamp(.95rem,1.3vw,1.12rem);line-height:1.65;text-align:left;text-shadow:0 2px 14px rgba(0,0,0,.8)}.hero-link{display:flex;align-items:center;gap:1.2rem;width:max-content;margin:2.1rem 0 0 clamp(1.2rem,2.7vw,2.8rem);padding:.85rem 0;color:#fff;border-bottom:1px solid rgba(255,255,255,.55);font:700 .55rem "Courier New",monospace;letter-spacing:.12em;text-decoration:none;text-transform:uppercase}.hero-link span{color:var(--cyan)}
 .mission-image{position:relative;width:min(84vw,72rem);height:min(76svh,48rem);margin:0 0 9rem auto;overflow:hidden;background:#0a3854}.mission-image img{width:100%;height:100%;object-fit:cover;object-position:center 48%}.mission-image::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,21,46,.7),transparent 50%)}.mission-image figcaption{position:absolute;inset:auto 1.5rem 1.5rem;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:2rem;color:#fff}.mission-image figcaption span{font:700 .52rem "Courier New",monospace;letter-spacing:.13em;text-transform:uppercase}.mission-image figcaption strong{max-width:18rem;font-size:clamp(1.2rem,2.2vw,2rem);line-height:1.1;text-align:right}.bearings{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:7vw}.bearings-content{min-width:0}.habitat-image{position:relative;height:min(55svh,36rem);margin:0 0 4rem;overflow:hidden;background:#082a42}.habitat-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.04)}.habitat-image::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,21,46,.75),transparent 55%)}.habitat-image figcaption{position:absolute;left:1.3rem;bottom:1.2rem;z-index:2;color:#fff;font:700 .55rem "Courier New",monospace;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:800px){.nav{background:rgba(4,18,38,.86)}.nav-join{padding:.6rem .75rem}.current-hero .hero-ui{padding-top:7rem}.current-hero .hero-index{top:6.4rem}.current-hero .hero-title{padding:1.25rem 1rem;background:rgba(3,16,34,.68);backdrop-filter:blur(4px)}.current-hero .hero-title h1{font-size:clamp(3.7rem,17vw,6.5rem)}.current-hero .hero-statement,.hero-link{margin-left:1rem}.mission-image{width:100%;height:66svh}.mission-image figcaption{align-items:start;flex-direction:column}.mission-image figcaption strong{text-align:left}.bearings{grid-template-columns:1fr}.habitat-image{height:60svh}}
